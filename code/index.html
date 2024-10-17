@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>Expense Tracker AI</h1>
+        </header>
+        <nav>
+            <button id="dashboardBtn">Dashboard</button>
+            <button id="addExpenseBtn">Add Expense</button>
+            <button id="categoriesBtn">Categories</button>
+            <button id="analyticsBtn">Analytics</button>
+            <button id="settingsBtn">Settings</button>
+        </nav>
+        <main id="mainContent">
+            <!-- Content will be dynamically loaded here -->
+        </main>
+        <div id="addExpenseModal" class="modal">
+            <div class="modal-content">
+                <h2>Add Expense</h2>
+                <form id="expenseForm">
+                    <input type="number" id="amount" placeholder="Amount" required>
+                    <select id="category" required>
+                        <option value="">Select Category</option>
+                        <option value="food">Food</option>
+                        <option value="travel">Travel</option>
+                        <option value="entertainment">Entertainment</option>
+                        <option value="utilities">Utilities</option>
+                    </select>
+                    <input type="date" id="date" required>
+                    <textarea id="notes" placeholder="Notes"></textarea>
+                    <button type="submit">Save Expense</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
